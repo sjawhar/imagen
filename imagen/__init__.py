@@ -25,15 +25,15 @@ from param.parameterized import ParamOverrides
 from param import ClassSelector
 
 # Imported here so that all PatternGenerators will be in the same package
-from patterngenerator import Constant, PatternGenerator
+from .patterngenerator import Constant, PatternGenerator
 
-from sheetcoords import SheetCoordinateSystem
-from patternfn import gaussian,exponential,gabor,line,disk,ring,\
+from .sheetcoords import SheetCoordinateSystem
+from .patternfn import gaussian,exponential,gabor,line,disk,ring,\
     sigmoid,arc_by_radian,arc_by_center,smooth_rectangle,float_error_ignore, \
     log_gaussian
 #from random import UniformRandom
 #import numbergen
-from imagen.transferfn import DivisiveNormalizeL1
+from .transferfn import DivisiveNormalizeL1
 
 
 # Could add a Gradient class, where the brightness varies as a

@@ -12,9 +12,9 @@ from numpy import add,subtract,cos,sin
 import param
 from param.parameterized import ParamOverrides
 
-from boundingregion import BoundingBox, BoundingRegionParameter
-from sheetcoords import SheetCoordinateSystem
-from imagen.transferfn import TransferFn
+from .boundingregion import BoundingBox, BoundingRegionParameter
+from .sheetcoords import SheetCoordinateSystem
+from .transferfn import TransferFn
 
 
 # CEBALERT: PatternGenerator has become a bit of a monster abstract
