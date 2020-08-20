@@ -1273,7 +1273,7 @@ class TimeSeries(param.Parameterized):
 
 
 def generate_sine_wave(duration, frequency, sample_rate):
-    time_axis = linspace(0.0, duration, duration*sample_rate)
+    time_axis = linspace(0.0, duration, int(duration*sample_rate))
     return sin(2.0*pi*frequency * time_axis)
 
 
@@ -1496,7 +1496,12 @@ class Spectrogram(PowerSpectrum):
 
 
 _public = list(set([_k for _k,_v in locals().items() if isinstance(_v,type) and issubclass(_v,PatternGenerator)]))
-del _k,_v
+
+try:
+    del _k,_v
+except NameError:
+    pass
+
 __all__ = _public + ["image","random"]
 
 # Avoids loading the audio and opencvcamera modules, which rely on external
